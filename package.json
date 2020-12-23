@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rebythecode/react-native-kustomer-sdk.git",
-    "baseUrl": "https://github.com/rebythecode/react-native-kustomer-sdk"
+    "url": "git@github.com:alex-lanclos/react-native-kustomerv2-sdk.git",
+    "baseUrl": "https://github.com/alex-lanclos/react-native-kustomerv2-sdk"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Aitor Cubeles Torres",
-    "email": "aitor@reby.com"
+    "name": "Alex Lanclos",
+    "email": "alexlanclos@gmail.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",

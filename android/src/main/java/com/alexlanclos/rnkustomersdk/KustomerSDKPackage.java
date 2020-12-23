@@ -1,4 +1,4 @@
-package co.reby.rnkustomersdk;
+package com.alexlanclos.rnkustomersdk;
 
 import java.util.Arrays;
 import java.util.Collections;

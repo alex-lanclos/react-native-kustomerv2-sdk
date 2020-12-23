@@ -73,7 +73,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-    implementation 'com.kustomer.kustomersdk:kustomersdk:0.3.6'
+    implementation 'com.kustomer.kustomersdk:kustomersdk:0.3.6' //Change this to the new SDK
 }
 
 def configureReactNativePom(def pom) {
@@ -83,7 +83,7 @@ def configureReactNativePom(def pom) {
         name packageJson.title
         artifactId packageJson.name
         version = packageJson.version
-        group = "co.reby.rnkustomersdk"
+        group = "com.alexlanclos.rnkustomersdk"
         description packageJson.description
         url packageJson.repository.baseUrl
 

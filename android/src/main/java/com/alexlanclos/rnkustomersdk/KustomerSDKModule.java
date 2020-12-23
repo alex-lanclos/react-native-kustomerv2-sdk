@@ -1,4 +1,4 @@
-package co.reby.rnkustomersdk;
+package com.alexlanclos.rnkustomersdk;
 
 import android.app.Activity;
 
