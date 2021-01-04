@@ -1,16 +1,9 @@
 {
   "name": "react-native-kustomerv2-sdk",
   "title": "React Native Kustomer V2 SDK",
-  "version": "1.0.0",
+  "version": "0.0.15",
   "description": "Kustomer V2 SDK for React Native",
   "main": "index.js",
-  "files": [
-    "README.md",
-    "android",
-    "index.js",
-    "ios",
-    "react-native-kustomerv2-sdk.podspec"
-  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

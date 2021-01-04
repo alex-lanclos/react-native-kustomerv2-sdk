@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9B16E55224B4B72B00AF6F0F /* KustomerSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B16E55124B4B72B00AF6F0F /* KustomerSDK.m */; };
+		9B5FCEEF25998CEE00F92DB9 /* KustomerSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5FCEEE25998CEE00F92DB9 /* KustomerSDK.swift */; };
+		9B5FCEF32599943000F92DB9 /* kustomer-ios in Frameworks */ = {isa = PBXBuildFile; productRef = 9B5FCEF22599943000F92DB9 /* kustomer-ios */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +26,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libKustomerSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKustomerSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B16E55024B4B72B00AF6F0F /* KustomerSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KustomerSDK.h; sourceTree = "<group>"; };
 		9B16E55124B4B72B00AF6F0F /* KustomerSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KustomerSDK.m; sourceTree = "<group>"; };
+		9B5FCEED25998CEE00F92DB9 /* KustomerSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KustomerSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		9B5FCEEE25998CEE00F92DB9 /* KustomerSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KustomerSDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5FCEF32599943000F92DB9 /* kustomer-ios in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,9 +54,10 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				9B16E55024B4B72B00AF6F0F /* KustomerSDK.h */,
 				9B16E55124B4B72B00AF6F0F /* KustomerSDK.m */,
+				9B5FCEEE25998CEE00F92DB9 /* KustomerSDK.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				9B5FCEED25998CEE00F92DB9 /* KustomerSDK-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +77,9 @@
 			dependencies = (
 			);
 			name = KustomerSDK;
+			packageProductDependencies = (
+				9B5FCEF22599943000F92DB9 /* kustomer-ios */,
+			);
 			productName = RCTDataManager;
 			productReference = 134814201AA4EA6300B7C361 /* libKustomerSDK.a */;
 			productType = "com.apple.product-type.library.static";
@@ -87,6 +95,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -99,6 +108,9 @@
 				Base,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
+			packageReferences = (
+				9B5FCEF12599943000F92DB9 /* XCRemoteSwiftPackageReference "kustomer-ios" */,
+			);
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
 			projectRoot = "";
@@ -113,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5FCEEF25998CEE00F92DB9 /* KustomerSDK.swift in Sources */,
 				9B16E55224B4B72B00AF6F0F /* KustomerSDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,7 +180,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
@@ -219,7 +235,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
@@ -234,32 +253,49 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = KustomerSDK;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "KustomerSDK-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = KustomerSDK;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "KustomerSDK-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -285,6 +321,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B5FCEF12599943000F92DB9 /* XCRemoteSwiftPackageReference "kustomer-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kustomer/kustomer-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B5FCEF22599943000F92DB9 /* kustomer-ios */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B5FCEF12599943000F92DB9 /* XCRemoteSwiftPackageReference "kustomer-ios" */;
+			productName = "kustomer-ios";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
 }
