@@ -8,7 +8,7 @@ class KustomerSDK: NSObject {
  @objc(identify:)
  func identify(jwt: String) -> Void {
    DispatchQueue.main.async {
-    Kustomer.identifyCurrentCustomer(jwt: jwt, { result in
+    Kustomer.logIn(jwt: jwt, { result in
       switch result {
       case .success:
         print("Success")

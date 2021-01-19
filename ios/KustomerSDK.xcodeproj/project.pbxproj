@@ -327,8 +327,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kustomer/kustomer-ios";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.3;
+				kind = exactVersion;
+				version = 2.0.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
