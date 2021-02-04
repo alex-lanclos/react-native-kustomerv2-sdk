@@ -88,7 +88,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${getExtOrDefault('kotlinVersion')}"
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-    implementation 'com.kustomer.chat:ui:2.0.+'
+    implementation 'com.kustomer.chat:ui:2.2.+'
 }
 
 def configureReactNativePom(def pom) {
